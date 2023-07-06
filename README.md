@@ -32,7 +32,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/TVHa8fs.png" height="80%" width="80%" alt="create linux VM"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In the Azure portal create a resource a group and two VM (one running Windows 10 and one running Linux-based Ubuntu).
 </p>
 <br />
 
@@ -40,15 +40,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/EOel9JP.png" height="80%" width="80%" alt="download wireshark"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+login into the Windows VM and download the application Wireshark.
 </p>
 <br />
 
 <p>
 <img src="https://i.imgur.com/A1uzkTq.png" height="80%" width="80%" alt="new inbound rule"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+From The Windows 10 VM, open the command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in Wireshark
+Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM.
+enable ICMP traffic for the Network Security Group your Ubuntu VM is using
+Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity.
+  
 </p>
 <br />
 
@@ -56,6 +59,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/ByqOCgA.png" height="80%" width="80%" alt="install wireshark/observe SSH"/> 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Back in Wireshark, filter for SSH traffic only
+From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address). <br/>
+Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark. <br/>
+Exit the SSH connection by typing ‘exit’ and pressing [Enter]
+
 </p>
 <br />
